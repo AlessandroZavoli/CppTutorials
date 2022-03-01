@@ -1,3 +1,8 @@
 /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles/rebuild_cache.dir
 /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles/edit_cache.dir
-/home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles/name_PROJECT.dir
+/home/alex-wsl/Esperimenti/prova_eigen/build/Example-0/CMakeFiles/rebuild_cache.dir
+/home/alex-wsl/Esperimenti/prova_eigen/build/Example-0/CMakeFiles/edit_cache.dir
+/home/alex-wsl/Esperimenti/prova_eigen/build/Example-0/CMakeFiles/example-0.dir
+/home/alex-wsl/Esperimenti/prova_eigen/build/Example-1/CMakeFiles/edit_cache.dir
+/home/alex-wsl/Esperimenti/prova_eigen/build/Example-1/CMakeFiles/rebuild_cache.dir
+/home/alex-wsl/Esperimenti/prova_eigen/build/Example-1/CMakeFiles/example-1.dir

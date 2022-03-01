@@ -53,46 +53,112 @@ CMAKE_BINARY_DIR = /home/alex-wsl/Esperimenti/prova_eigen/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/name_PROJECT.dir/all
+all: Example-0/all
+all: Example-1/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: Example-0/preinstall
+preinstall: Example-1/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/name_PROJECT.dir/clean
+clean: Example-0/clean
+clean: Example-1/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/name_PROJECT.dir
+# Directory level rules for directory Example-0
+
+# Recursive "all" directory target.
+Example-0/all: Example-0/CMakeFiles/example-0.dir/all
+
+.PHONY : Example-0/all
+
+# Recursive "preinstall" directory target.
+Example-0/preinstall:
+
+.PHONY : Example-0/preinstall
+
+# Recursive "clean" directory target.
+Example-0/clean: Example-0/CMakeFiles/example-0.dir/clean
+
+.PHONY : Example-0/clean
+
+#=============================================================================
+# Directory level rules for directory Example-1
+
+# Recursive "all" directory target.
+Example-1/all: Example-1/CMakeFiles/example-1.dir/all
+
+.PHONY : Example-1/all
+
+# Recursive "preinstall" directory target.
+Example-1/preinstall:
+
+.PHONY : Example-1/preinstall
+
+# Recursive "clean" directory target.
+Example-1/clean: Example-1/CMakeFiles/example-1.dir/clean
+
+.PHONY : Example-1/clean
+
+#=============================================================================
+# Target rules for target Example-0/CMakeFiles/example-0.dir
 
 # All Build rule for target.
-CMakeFiles/name_PROJECT.dir/all:
-	$(MAKE) -f CMakeFiles/name_PROJECT.dir/build.make CMakeFiles/name_PROJECT.dir/depend
-	$(MAKE) -f CMakeFiles/name_PROJECT.dir/build.make CMakeFiles/name_PROJECT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles --progress-num=1,2 "Built target name_PROJECT"
-.PHONY : CMakeFiles/name_PROJECT.dir/all
+Example-0/CMakeFiles/example-0.dir/all:
+	$(MAKE) -f Example-0/CMakeFiles/example-0.dir/build.make Example-0/CMakeFiles/example-0.dir/depend
+	$(MAKE) -f Example-0/CMakeFiles/example-0.dir/build.make Example-0/CMakeFiles/example-0.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles --progress-num=1,2 "Built target example-0"
+.PHONY : Example-0/CMakeFiles/example-0.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/name_PROJECT.dir/rule: cmake_check_build_system
+Example-0/CMakeFiles/example-0.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/name_PROJECT.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 Example-0/CMakeFiles/example-0.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles 0
-.PHONY : CMakeFiles/name_PROJECT.dir/rule
+.PHONY : Example-0/CMakeFiles/example-0.dir/rule
 
 # Convenience name for target.
-name_PROJECT: CMakeFiles/name_PROJECT.dir/rule
+example-0: Example-0/CMakeFiles/example-0.dir/rule
 
-.PHONY : name_PROJECT
+.PHONY : example-0
 
 # clean rule for target.
-CMakeFiles/name_PROJECT.dir/clean:
-	$(MAKE) -f CMakeFiles/name_PROJECT.dir/build.make CMakeFiles/name_PROJECT.dir/clean
-.PHONY : CMakeFiles/name_PROJECT.dir/clean
+Example-0/CMakeFiles/example-0.dir/clean:
+	$(MAKE) -f Example-0/CMakeFiles/example-0.dir/build.make Example-0/CMakeFiles/example-0.dir/clean
+.PHONY : Example-0/CMakeFiles/example-0.dir/clean
+
+#=============================================================================
+# Target rules for target Example-1/CMakeFiles/example-1.dir
+
+# All Build rule for target.
+Example-1/CMakeFiles/example-1.dir/all:
+	$(MAKE) -f Example-1/CMakeFiles/example-1.dir/build.make Example-1/CMakeFiles/example-1.dir/depend
+	$(MAKE) -f Example-1/CMakeFiles/example-1.dir/build.make Example-1/CMakeFiles/example-1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles --progress-num=3,4 "Built target example-1"
+.PHONY : Example-1/CMakeFiles/example-1.dir/all
+
+# Build rule for subdir invocation for target.
+Example-1/CMakeFiles/example-1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Example-1/CMakeFiles/example-1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles 0
+.PHONY : Example-1/CMakeFiles/example-1.dir/rule
+
+# Convenience name for target.
+example-1: Example-1/CMakeFiles/example-1.dir/rule
+
+.PHONY : example-1
+
+# clean rule for target.
+Example-1/CMakeFiles/example-1.dir/clean:
+	$(MAKE) -f Example-1/CMakeFiles/example-1.dir/build.make Example-1/CMakeFiles/example-1.dir/clean
+.PHONY : Example-1/CMakeFiles/example-1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

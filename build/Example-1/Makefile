@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/alex-wsl/Esperimenti/prova_eigen/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -78,16 +67,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles /home/alex-wsl/Esperimenti/prova_eigen/build/Example-1/CMakeFiles/progress.marks
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-1/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-1/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,44 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-1/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-1/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named example-0
+# Convenience name for target.
+Example-1/CMakeFiles/example-1.dir/rule:
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-1/CMakeFiles/example-1.dir/rule
+.PHONY : Example-1/CMakeFiles/example-1.dir/rule
 
-# Build rule for target.
-example-0: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 example-0
-.PHONY : example-0
+# Convenience name for target.
+example-1: Example-1/CMakeFiles/example-1.dir/rule
 
-# fast build rule for target.
-example-0/fast:
-	$(MAKE) -f Example-0/CMakeFiles/example-0.dir/build.make Example-0/CMakeFiles/example-0.dir/build
-.PHONY : example-0/fast
-
-#=============================================================================
-# Target rules for targets named example-1
-
-# Build rule for target.
-example-1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 example-1
 .PHONY : example-1
 
 # fast build rule for target.
 example-1/fast:
-	$(MAKE) -f Example-1/CMakeFiles/example-1.dir/build.make Example-1/CMakeFiles/example-1.dir/build
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f Example-1/CMakeFiles/example-1.dir/build.make Example-1/CMakeFiles/example-1.dir/build
 .PHONY : example-1/fast
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f Example-1/CMakeFiles/example-1.dir/build.make Example-1/CMakeFiles/example-1.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f Example-1/CMakeFiles/example-1.dir/build.make Example-1/CMakeFiles/example-1.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f Example-1/CMakeFiles/example-1.dir/build.make Example-1/CMakeFiles/example-1.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -142,10 +158,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... example-0"
+	@echo "... rebuild_cache"
 	@echo "... example-1"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
@@ -157,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

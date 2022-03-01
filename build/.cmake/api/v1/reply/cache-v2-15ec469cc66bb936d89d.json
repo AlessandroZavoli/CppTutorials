@@ -39,11 +39,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel ..."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "STRING",
-			"value" : ""
+			"value" : "Debug"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -519,11 +519,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Enable/Disable output of compile commands during generation."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "BOOL",
-			"value" : "OFF"
+			"value" : "TRUE"
 		},
 		{
 			"name" : "CMAKE_EXTRA_GENERATOR",
@@ -759,7 +759,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -839,7 +839,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "name_PROJECT"
+			"value" : "all_examples"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1131,7 +1131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[TRUE][TRUE][c ][v4.5()]"
+			"value" : "[TRUE][TRUE][c ][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C",
@@ -1143,7 +1143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v4.5()]"
+			"value" : "[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX",
@@ -1155,7 +1155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v4.5()]"
+			"value" : "[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v()]"
 		},
 		{
 			"name" : "OpenMP_COMPILE_RESULT_CXX_fopenmp",
@@ -1326,7 +1326,7 @@
 			"value" : "/usr/lib/x86_64-linux-gnu/libpthread.so"
 		},
 		{
-			"name" : "name_PROJECT_BINARY_DIR",
+			"name" : "all_examples_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1338,7 +1338,7 @@
 			"value" : "/home/alex-wsl/Esperimenti/prova_eigen/build"
 		},
 		{
-			"name" : "name_PROJECT_SOURCE_DIR",
+			"name" : "all_examples_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1348,6 +1348,54 @@
 			],
 			"type" : "STATIC",
 			"value" : "/home/alex-wsl/Esperimenti/prova_eigen"
+		},
+		{
+			"name" : "example-0_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/alex-wsl/Esperimenti/prova_eigen/build/Example-0"
+		},
+		{
+			"name" : "example-0_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/alex-wsl/Esperimenti/prova_eigen/Example-0"
+		},
+		{
+			"name" : "example-1_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/alex-wsl/Esperimenti/prova_eigen/build/Example-1"
+		},
+		{
+			"name" : "example-1_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/alex-wsl/Esperimenti/prova_eigen/Example-1"
 		}
 	],
 	"kind" : "cache",

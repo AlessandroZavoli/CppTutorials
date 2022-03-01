@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alex-wsl/Esperimenti/prova_eigen/Example-1/src/main.cpp
+iostream
+-
+eigen3/Eigen/Dense
+/home/alex-wsl/Esperimenti/prova_eigen/Example-1/src/eigen3/Eigen/Dense
+

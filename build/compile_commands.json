@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/alex-wsl/Esperimenti/prova_eigen/build/Example-0",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/local/include/eigen3   -fopenmp -g   -g -ggdb -O0 -std=c++11 -std=gnu++11 -o CMakeFiles/example-0.dir/src/main.cpp.o -c /home/alex-wsl/Esperimenti/prova_eigen/Example-0/src/main.cpp",
+  "file": "/home/alex-wsl/Esperimenti/prova_eigen/Example-0/src/main.cpp"
+},
+{
+  "directory": "/home/alex-wsl/Esperimenti/prova_eigen/build/Example-1",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/local/include/eigen3   -fopenmp -g   -g -ggdb -O0 -std=c++11 -std=gnu++11 -o CMakeFiles/example-1.dir/src/main.cpp.o -c /home/alex-wsl/Esperimenti/prova_eigen/Example-1/src/main.cpp",
+  "file": "/home/alex-wsl/Esperimenti/prova_eigen/Example-1/src/main.cpp"
+}
+]

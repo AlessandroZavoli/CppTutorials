@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/alex-wsl/Esperimenti/prova_eigen
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alex-wsl/Esperimenti/prova_eigen
+CMAKE_BINARY_DIR = /home/alex-wsl/Esperimenti/prova_eigen/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/CMakeFiles /home/alex-wsl/Esperimenti/prova_eigen/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/CMakeFiles 0
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles /home/alex-wsl/Esperimenti/prova_eigen/build/Example-0/CMakeFiles/progress.marks
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-0/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex-wsl/Esperimenti/prova_eigen/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-0/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,31 +97,33 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-0/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-0/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named name_PROJECT
+# Convenience name for target.
+Example-0/CMakeFiles/example-0.dir/rule:
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f CMakeFiles/Makefile2 Example-0/CMakeFiles/example-0.dir/rule
+.PHONY : Example-0/CMakeFiles/example-0.dir/rule
 
-# Build rule for target.
-name_PROJECT: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 name_PROJECT
-.PHONY : name_PROJECT
+# Convenience name for target.
+example-0: Example-0/CMakeFiles/example-0.dir/rule
+
+.PHONY : example-0
 
 # fast build rule for target.
-name_PROJECT/fast:
-	$(MAKE) -f CMakeFiles/name_PROJECT.dir/build.make CMakeFiles/name_PROJECT.dir/build
-.PHONY : name_PROJECT/fast
+example-0/fast:
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f Example-0/CMakeFiles/example-0.dir/build.make Example-0/CMakeFiles/example-0.dir/build
+.PHONY : example-0/fast
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +131,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/name_PROJECT.dir/build.make CMakeFiles/name_PROJECT.dir/src/main.cpp.o
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f Example-0/CMakeFiles/example-0.dir/build.make Example-0/CMakeFiles/example-0.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +140,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/name_PROJECT.dir/build.make CMakeFiles/name_PROJECT.dir/src/main.cpp.i
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f Example-0/CMakeFiles/example-0.dir/build.make Example-0/CMakeFiles/example-0.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,7 +149,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/name_PROJECT.dir/build.make CMakeFiles/name_PROJECT.dir/src/main.cpp.s
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(MAKE) -f Example-0/CMakeFiles/example-0.dir/build.make Example-0/CMakeFiles/example-0.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -158,7 +160,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... name_PROJECT"
+	@echo "... example-0"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -173,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/alex-wsl/Esperimenti/prova_eigen/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
