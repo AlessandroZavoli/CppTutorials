@@ -4,6 +4,7 @@
 
 - [Example 1](#example-1)  Using `Eigen` for vector/matrix operations
 
+- [Example 3] "test"
 
 
 
